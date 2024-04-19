@@ -1,0 +1,58 @@
+﻿<style>
+
+    form {
+        margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 1.6rem;
+        padding: 1.2rem;
+        background-color: darkgrey;
+        border-radius: 6px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    input {
+        height: 2.4rem;
+        border-radius: 6px;
+        border: none;
+        transition: all 0.2s;
+    }
+
+    input:focus {
+        outline: none;
+        background-color: #eee;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    button {
+        background-color: #666;
+        border: none;
+        border-radius: 6px;
+        height: 2.4rem;
+        color: #eeeeee;
+    }
+</style>
+
+@model AddUserRequest
+
+<div class="container">
+    <form method="post">
+        <label>
+            <span>Write your name</span>
+            <input type="text" asp-for="Name" required/>
+        </label>
+        <button type="submit">Enter to sana bootcamp</button>
+    </form>
+</div>

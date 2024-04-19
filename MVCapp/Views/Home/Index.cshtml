@@ -1,0 +1,25 @@
+﻿<style>
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    h2{
+        margin-top: 20rem;
+    }
+    
+</style>
+@model List<MVCapp.Models.Domain.User>
+
+@if (Model.Any())
+{
+    var currentUser = Model.Last();
+    <h2>Hello @currentUser.Name</h2>
+}
+else
+{
+    <h2>No users yet</h2>
+}
